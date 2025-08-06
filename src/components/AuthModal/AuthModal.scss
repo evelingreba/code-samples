@@ -1,0 +1,10 @@
+.auth-modal {
+  @include sm {
+    width: 400px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 8px hsla(0deg, 0%, 57.3%, 50%);
+  }
+}

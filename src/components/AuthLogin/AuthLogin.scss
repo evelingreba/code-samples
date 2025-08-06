@@ -1,0 +1,52 @@
+.auth-login {
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 15px;
+  }
+
+  &__social {
+    margin-top: 15px;
+
+    &-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      margin-top: 15px;
+      gap: 10px 25px;
+    }
+
+    &-error {
+      width: 100%;
+      margin: 5px 0 0;
+      padding: 0;
+      color: $red;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    legend {
+      color: $black400;
+    }
+  }
+
+  &__agree {
+    color: $black700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 20px;
+
+    a {
+      color: $blue400;
+
+      &:hover {
+        color: $blue500;
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,56 @@
+.auth-confirm {
+  &__subtitle {
+    margin-bottom: 25px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__input {
+    &-wrap {
+      display: flex;
+    }
+  }
+
+  &__actions {
+    width: 100%;
+    margin-top: 25px;
+    display: grid;
+    gap: 20px;
+
+    .btn {
+      &:not(.btn--disabled) {
+        color: $blue400;
+
+        &:hover {
+          color: $blue500;
+        }
+      }
+    }
+  }
+
+  .input-field {
+    &--xs {
+      width: 47px !important;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &--lg {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      flex: 1;
+
+      &:hover {
+        border-color: $black250
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
