@@ -57,8 +57,6 @@ const $emit = defineEmits(['confirm', 'authError']);
 
 const { pending, controlCode, email, code } = storeToRefs(useAuthStore());
 
-const isMounted = ref(false);
-
 const codeRef = ref();
 
 const controlCodeRef = ref();
@@ -122,10 +120,6 @@ const onSubmit = async () => {
 
   loading.value = false;
 };
-
-onMounted(() => {
-  isMounted.value = true;
-});
 
 watchEffect(() => {
   if (codeRef.value?.inputRef) {
