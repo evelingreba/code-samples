@@ -57,8 +57,6 @@ const { openAuthModal } = useAuth();
 const { isOtpGenerated, controlCode, email } = storeToRefs(useAuthStore())
 
 const emailRef = ref();
-const errorSocial = ref();
-const isMounted = ref(false);
 const loading = ref(false);
 
 const { errors, meta, defineField, setErrors, validate } = useForm({
@@ -132,19 +130,6 @@ const makeAuth = async () => {
   loading.value = false;
   openAuthModal();
 };
-
-watchEffect(() => {
-  if (emailRef.value?.inputRef) {
-    errorSocial.value = '';
-    focus();
-  }
-});
-
-onMounted(() => {
-  setTimeout(() => {
-    isMounted.value = true;
-  }, 100);
-});
 
 defineExpose({
   emailRef,
